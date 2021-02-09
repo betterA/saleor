@@ -63,16 +63,4 @@ class Migration(migrations.Migration):
         ),
         migrations.RunPython(calculate_undiscounted_total_values),
         migrations.RunPython(create_order_discount_relations),
-        migrations.RemoveField(
-            model_name="order",
-            name="discount_amount",
-        ),
-        migrations.RemoveField(
-            model_name="order",
-            name="discount_name",
-        ),
-        migrations.RemoveField(
-            model_name="order",
-            name="translated_discount_name",
-        ),
     ]
